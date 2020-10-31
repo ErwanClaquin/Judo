@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Judo feuille de combats</string>
+    <string name="nouvelle_feuille">Nouvelle feuille</string>
+    <string name="charger_une_feuille">Charger une feuille</string>
+    <string name="d_marrer_le_combat">Démarrer le prochain combat</string>
+    <string name="noms">Noms</string>
+    <string name="clubs">Clubs</string>
+    <string name="_1">1</string>
+    <string name="_2">2</string>
+    <string name="_3">3</string>
+    <string name="_4">4</string>
+    <string name="_5">5</string>
+    <string name="_6">6</string>
+    <string name="total_victoires">Total Victoires</string>
+    <string name="total_points">Total Points</string>
+    <string name="place">Place</string>
+</resources>

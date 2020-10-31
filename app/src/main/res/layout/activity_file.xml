@@ -1,0 +1,2411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/TableLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="fill"
+    tools:context=".FileActivity">
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="true">
+
+                <TableRow android:id="@+id/row">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/border"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="@string/noms" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/border"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="@string/clubs" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/black"
+                        android:gravity="center"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/border"
+                        android:gravity="center"
+                        android:text="@string/_1" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/border"
+                        android:gravity="center"
+                        android:text="@string/_2" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/border"
+                        android:gravity="center"
+                        android:text="@string/_3" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/border"
+                        android:gravity="center"
+                        android:text="@string/_4" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/border"
+                        android:gravity="center"
+                        android:text="@string/_5" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/border"
+                        android:gravity="center"
+                        android:text="@string/_6" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/border"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="@string/total_victoires" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/border"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="@string/total_points" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/border"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="@string/place" />
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/row1"
+                    android:background="@drawable/border"
+                    android:baselineAligned="false"
+                    android:gravity="center">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:autofillHints=""
+                        android:background="@drawable/border"
+                        android:gravity="center"
+                        android:inputType="textShortMessage"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text=""
+                        tools:ignore="LabelFor" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:autofillHints=""
+                        android:background="@drawable/border"
+                        android:gravity="center"
+                        android:inputType="textShortMessage"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text=""
+                        tools:ignore="LabelFor" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/border"
+                        android:gravity="center"
+                        android:text="@string/_1" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/black"
+                        android:text="" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:gravity="center"
+                                android:inputType="textShortMessage"
+                                android:minWidth="10dp"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:inputType="numberSigned"
+                                android:minWidth="10dp"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:inputType="numberSigned"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+
+                        </TableRow>
+
+
+                    </TableLayout>
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:gravity="center"
+                                android:inputType="textShortMessage"
+                                android:minWidth="10dp"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:inputType="numberSigned"
+                                android:minWidth="10dp"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:inputType="numberSigned"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+
+                        </TableRow>
+
+
+                    </TableLayout>
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:gravity="center"
+                                android:inputType="textShortMessage"
+                                android:minWidth="10dp"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:inputType="numberSigned"
+                                android:minWidth="10dp"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:inputType="numberSigned"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+
+                        </TableRow>
+
+
+                    </TableLayout>
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:gravity="center"
+                                android:inputType="textShortMessage"
+                                android:minWidth="10dp"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:inputType="numberSigned"
+                                android:minWidth="10dp"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:inputType="numberSigned"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+
+                        </TableRow>
+
+
+                    </TableLayout>
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:gravity="center"
+                                android:inputType="textShortMessage"
+                                android:minWidth="10dp"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:inputType="numberSigned"
+                                android:minWidth="10dp"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:inputType="numberSigned"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+
+                        </TableRow>
+
+
+                    </TableLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/border"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/border"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/border"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="" />
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/row2"
+                    android:background="@drawable/border"
+                    android:baselineAligned="false"
+                    android:gravity="center">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:autofillHints=""
+                        android:background="@drawable/border"
+                        android:gravity="center"
+                        android:inputType="textShortMessage"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text=""
+                        tools:ignore="LabelFor" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:autofillHints=""
+                        android:background="@drawable/border"
+                        android:gravity="center"
+                        android:inputType="textShortMessage"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text=""
+                        tools:ignore="LabelFor" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/border"
+                        android:gravity="center"
+                        android:text="@string/_2" />
+
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:gravity="center"
+                                android:inputType="textShortMessage"
+                                android:minWidth="10dp"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:inputType="numberSigned"
+                                android:minWidth="10dp"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:inputType="numberSigned"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+
+                        </TableRow>
+
+
+                    </TableLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/black"
+                        android:text="" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:gravity="center"
+                                android:inputType="textShortMessage"
+                                android:minWidth="10dp"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:inputType="numberSigned"
+                                android:minWidth="10dp"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:inputType="numberSigned"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+
+                        </TableRow>
+
+
+                    </TableLayout>
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:gravity="center"
+                                android:inputType="textShortMessage"
+                                android:minWidth="10dp"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:inputType="numberSigned"
+                                android:minWidth="10dp"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:inputType="numberSigned"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+
+                        </TableRow>
+
+
+                    </TableLayout>
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:gravity="center"
+                                android:inputType="textShortMessage"
+                                android:minWidth="10dp"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:inputType="numberSigned"
+                                android:minWidth="10dp"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:inputType="numberSigned"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+
+                        </TableRow>
+
+
+                    </TableLayout>
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:gravity="center"
+                                android:inputType="textShortMessage"
+                                android:minWidth="10dp"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:inputType="numberSigned"
+                                android:minWidth="10dp"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:inputType="numberSigned"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+
+                        </TableRow>
+
+
+                    </TableLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/border"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/border"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/border"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="" />
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/row34"
+                    android:background="@drawable/border"
+                    android:baselineAligned="false"
+                    android:gravity="center">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:autofillHints=""
+                        android:background="@drawable/border"
+                        android:gravity="center"
+                        android:inputType="textShortMessage"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text=""
+                        tools:ignore="LabelFor" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:autofillHints=""
+                        android:background="@drawable/border"
+                        android:gravity="center"
+                        android:inputType="textShortMessage"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text=""
+                        tools:ignore="LabelFor" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/border"
+                        android:gravity="center"
+                        android:text="@string/_3" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:gravity="center"
+                                android:inputType="textShortMessage"
+                                android:minWidth="10dp"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:inputType="numberSigned"
+                                android:minWidth="10dp"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:inputType="numberSigned"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+
+                        </TableRow>
+
+
+                    </TableLayout>
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:gravity="center"
+                                android:inputType="textShortMessage"
+                                android:minWidth="10dp"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:inputType="numberSigned"
+                                android:minWidth="10dp"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:inputType="numberSigned"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+
+                        </TableRow>
+
+
+                    </TableLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/black"
+                        android:text="" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:gravity="center"
+                                android:inputType="textShortMessage"
+                                android:minWidth="10dp"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:inputType="numberSigned"
+                                android:minWidth="10dp"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:inputType="numberSigned"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+
+                        </TableRow>
+
+
+                    </TableLayout>
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:gravity="center"
+                                android:inputType="textShortMessage"
+                                android:minWidth="10dp"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:inputType="numberSigned"
+                                android:minWidth="10dp"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:inputType="numberSigned"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+
+                        </TableRow>
+
+
+                    </TableLayout>
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:gravity="center"
+                                android:inputType="textShortMessage"
+                                android:minWidth="10dp"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:inputType="numberSigned"
+                                android:minWidth="10dp"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:inputType="numberSigned"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+
+                        </TableRow>
+
+
+                    </TableLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/border"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/border"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/border"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="" />
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/row4"
+                    android:background="@drawable/border"
+                    android:baselineAligned="false"
+                    android:gravity="center">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:autofillHints=""
+                        android:background="@drawable/border"
+                        android:gravity="center"
+                        android:inputType="textShortMessage"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text=""
+                        tools:ignore="LabelFor" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:autofillHints=""
+                        android:background="@drawable/border"
+                        android:gravity="center"
+                        android:inputType="textShortMessage"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text=""
+                        tools:ignore="LabelFor" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/border"
+                        android:gravity="center"
+                        android:text="@string/_4" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:gravity="center"
+                                android:inputType="textShortMessage"
+                                android:minWidth="10dp"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:inputType="numberSigned"
+                                android:minWidth="10dp"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:inputType="numberSigned"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+
+                        </TableRow>
+
+
+                    </TableLayout>
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:gravity="center"
+                                android:inputType="textShortMessage"
+                                android:minWidth="10dp"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:inputType="numberSigned"
+                                android:minWidth="10dp"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:inputType="numberSigned"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+
+                        </TableRow>
+
+
+                    </TableLayout>
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:gravity="center"
+                                android:inputType="textShortMessage"
+                                android:minWidth="10dp"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:inputType="numberSigned"
+                                android:minWidth="10dp"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:inputType="numberSigned"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+
+                        </TableRow>
+
+
+                    </TableLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/black"
+                        android:text="" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:gravity="center"
+                                android:inputType="textShortMessage"
+                                android:minWidth="10dp"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:inputType="numberSigned"
+                                android:minWidth="10dp"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:inputType="numberSigned"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+
+                        </TableRow>
+
+
+                    </TableLayout>
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:gravity="center"
+                                android:inputType="textShortMessage"
+                                android:minWidth="10dp"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:inputType="numberSigned"
+                                android:minWidth="10dp"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:inputType="numberSigned"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+
+                        </TableRow>
+
+
+                    </TableLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/border"
+                        android:text="" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/border"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/border"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="" />
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/row5"
+                    android:background="@drawable/border"
+                    android:baselineAligned="false"
+                    android:gravity="center">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:autofillHints=""
+                        android:background="@drawable/border"
+                        android:gravity="center"
+                        android:inputType="textShortMessage"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text=""
+                        tools:ignore="LabelFor" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:autofillHints=""
+                        android:background="@drawable/border"
+                        android:gravity="center"
+                        android:inputType="textShortMessage"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text=""
+                        tools:ignore="LabelFor" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/border"
+                        android:gravity="center"
+                        android:text="@string/_5" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:gravity="center"
+                                android:inputType="textShortMessage"
+                                android:minWidth="10dp"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:inputType="numberSigned"
+                                android:minWidth="10dp"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:inputType="numberSigned"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+
+                        </TableRow>
+
+
+                    </TableLayout>
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:gravity="center"
+                                android:inputType="textShortMessage"
+                                android:minWidth="10dp"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:inputType="numberSigned"
+                                android:minWidth="10dp"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:inputType="numberSigned"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+
+                        </TableRow>
+
+
+                    </TableLayout>
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:gravity="center"
+                                android:inputType="textShortMessage"
+                                android:minWidth="10dp"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:inputType="numberSigned"
+                                android:minWidth="10dp"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:inputType="numberSigned"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+
+                        </TableRow>
+
+
+                    </TableLayout>
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:gravity="center"
+                                android:inputType="textShortMessage"
+                                android:minWidth="10dp"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:inputType="numberSigned"
+                                android:minWidth="10dp"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:inputType="numberSigned"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+
+                        </TableRow>
+
+
+                    </TableLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/black"
+                        android:text="" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:gravity="center"
+                                android:inputType="textShortMessage"
+                                android:minWidth="10dp"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:inputType="numberSigned"
+                                android:minWidth="10dp"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:inputType="numberSigned"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+
+                        </TableRow>
+
+
+                    </TableLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/border"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/border"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/border"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="" />
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/row6"
+                    android:background="@drawable/border"
+                    android:baselineAligned="false"
+                    android:gravity="center">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:autofillHints=""
+                        android:background="@drawable/border"
+                        android:gravity="center"
+                        android:inputType="textShortMessage"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text=""
+                        tools:ignore="LabelFor" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:autofillHints=""
+                        android:background="@drawable/border"
+                        android:gravity="center"
+                        android:inputType="textShortMessage"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text=""
+                        tools:ignore="LabelFor" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/border"
+                        android:gravity="center"
+                        android:text="@string/_6" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:gravity="center"
+                                android:inputType="textShortMessage"
+                                android:minWidth="10dp"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:inputType="numberSigned"
+                                android:minWidth="10dp"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:inputType="numberSigned"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+
+                        </TableRow>
+
+
+                    </TableLayout>
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:gravity="center"
+                                android:inputType="textShortMessage"
+                                android:minWidth="10dp"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:inputType="numberSigned"
+                                android:minWidth="10dp"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:inputType="numberSigned"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+
+                        </TableRow>
+
+
+                    </TableLayout>
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:gravity="center"
+                                android:inputType="textShortMessage"
+                                android:minWidth="10dp"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:inputType="numberSigned"
+                                android:minWidth="10dp"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:inputType="numberSigned"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+
+                        </TableRow>
+
+
+                    </TableLayout>
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:gravity="center"
+                                android:inputType="textShortMessage"
+                                android:minWidth="10dp"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:inputType="numberSigned"
+                                android:minWidth="10dp"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:inputType="numberSigned"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+
+                        </TableRow>
+
+
+                    </TableLayout>
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:gravity="center"
+                                android:inputType="textShortMessage"
+                                android:minWidth="10dp"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:inputType="numberSigned"
+                                android:minWidth="10dp"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints=""
+                                android:background="@drawable/border"
+                                android:inputType="numberSigned"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                tools:ignore="LabelFor" />
+
+                        </TableRow>
+
+
+                    </TableLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/black"
+                        android:text="" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/border"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/border"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/border"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="" />
+
+                </TableRow>
+            </TableLayout>
+        </ScrollView>
+    </HorizontalScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/buttonStartCombat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/d_marrer_le_combat"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

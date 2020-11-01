@@ -14,4 +14,12 @@
     <string name="total_victoires">Total Victoires</string>
     <string name="total_points">Total Points</string>
     <string name="place">Place</string>
+    <string name="plus">+</string>
+    <string name="minus">-</string>
+    <string name="ippon">Ippon</string>
+    <string name="waza">Waza</string>
+    <string name="shido">Shido</string>
+    <string name="fin_du_combat">Fin du combat</string>
+    <string name="start">Start</string>
+    <string name="pause">Pause</string>
 </resources>

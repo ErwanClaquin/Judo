@@ -6,4 +6,323 @@
     android:layout_height="match_parent"
     tools:context=".CombatActivity">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/EndCombat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="20dp">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <Button
+                                android:id="@+id/B_ippon_plus"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/plus"
+                                android:textColor="#000000"
+                                app:backgroundTint="#FFFFFF"
+                                tools:ignore="ButtonStyle" />
+
+                            <Button
+                                android:id="@+id/B_waza_plus"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/plus"
+                                android:textColor="#000000"
+                                app:backgroundTint="#FFFFFF"
+                                tools:ignore="ButtonStyle" />
+
+                            <Button
+                                android:id="@+id/B_shido_plus"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/plus"
+                                android:textColor="#000000"
+                                app:backgroundTint="#FFFFFF"
+                                tools:ignore="ButtonStyle" />
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/ippon" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/waza" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/shido" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/B_ippon"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="0"
+                                tools:ignore="HardcodedText" />
+
+                            <TextView
+                                android:id="@+id/B_waza"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="0"
+                                tools:ignore="HardcodedText" />
+
+                            <TextView
+                                android:id="@+id/B_shido"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="0"
+                                tools:ignore="HardcodedText" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <Button
+                                android:id="@+id/B_ippon_minus"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/minus"
+                                android:textColor="#000000"
+                                app:backgroundTint="#FFFFFF"
+                                tools:ignore="ButtonStyle" />
+
+                            <Button
+                                android:id="@+id/B_waza_minus"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/minus"
+                                android:textColor="#000000"
+                                app:backgroundTint="#FFFFFF"
+                                tools:ignore="ButtonStyle" />
+
+                            <Button
+                                android:id="@+id/B_shido_minus"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/minus"
+                                android:textColor="#000000"
+                                app:backgroundTint="#FFFFFF"
+                                tools:ignore="ButtonStyle" />
+                        </TableRow>
+                    </TableLayout>
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="20dp">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <Button
+                                android:id="@+id/R_ippon_plus"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/plus"
+                                android:textColor="#000000"
+                                app:backgroundTint="#FF0000"
+                                tools:ignore="ButtonStyle" />
+
+                            <Button
+                                android:id="@+id/R_waza_plus"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/plus"
+                                android:textColor="#000000"
+                                app:backgroundTint="#FF0000"
+                                tools:ignore="ButtonStyle" />
+
+                            <Button
+                                android:id="@+id/R_shido_plus"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/plus"
+                                android:textColor="#000000"
+                                app:backgroundTint="#FF0000"
+                                tools:ignore="ButtonStyle" />
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="@string/ippon" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/waza" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/shido" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/R_ippon"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="0"
+                                tools:ignore="HardcodedText" />
+
+                            <TextView
+                                android:id="@+id/R_waza"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="0"
+                                tools:ignore="HardcodedText" />
+
+                            <TextView
+                                android:id="@+id/R_shido"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="0"
+                                tools:ignore="HardcodedText" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <Button
+                                android:id="@+id/R_ippon_minus"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/minus"
+                                android:textColor="#000000"
+                                app:backgroundTint="#FF0000"
+                                tools:ignore="ButtonStyle" />
+
+                            <Button
+                                android:id="@+id/R_waza_minus"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/minus"
+                                android:textColor="#000000"
+                                app:backgroundTint="#FF0000"
+                                tools:ignore="ButtonStyle" />
+
+                            <Button
+                                android:id="@+id/R_shido_minus"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/minus"
+                                android:textColor="#000000"
+                                app:backgroundTint="#FF0000"
+                                tools:ignore="ButtonStyle" />
+                        </TableRow>
+                    </TableLayout>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/startTimer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/start" />
+
+                <TextView
+                    android:id="@+id/Timer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="20dp"
+                    android:text="3:00"
+                    android:textSize="30sp"
+                    tools:ignore="HardcodedText" />
+
+                <Button
+                    android:id="@+id/pauseTimer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:alpha="0.25"
+                    android:text="@string/pause" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/EndCombat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fin_du_combat"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

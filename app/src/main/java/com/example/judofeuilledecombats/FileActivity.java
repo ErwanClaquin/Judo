@@ -5,7 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.text.Editable;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -168,10 +170,17 @@ public class FileActivity extends AppCompatActivity {
                     //first row first col
                     if (vainqueur.equals("R")) {
                         VorX.setText("V");
+                        VorX.setTextColor(Color.parseColor("#00FF00"));
                         VorXopp.setText("X");
+                        VorXopp.setTextColor(Color.parseColor("#FF0000"));
+
                     } else {
                         VorX.setText("X");
+                        VorX.setTextColor(Color.parseColor("#FF0000"));
                         VorXopp.setText("V");
+                        VorXopp.setTextColor(Color.parseColor("#00FF00"));
+
+
                     }
 
 
@@ -261,6 +270,34 @@ public class FileActivity extends AppCompatActivity {
     }
 
     private void fillResult() {
+        TableLayout tableLayout = findViewById(R.id.maintable);
+        int len = tableLayout.getChildCount();
+        for (int j = 1; j < len; j++) {
+            int points = 0;
+            int victoires = 0;
+            TableRow tableRow = (TableRow) tableLayout.getChildAt(j);
+            for (int i = 1; i < len; i++) {
+                if (i != j) {
+                    TableLayout TableLayoutPoints = (TableLayout) tableRow.getChildAt(2 + i);
+                    TableRow tableRowPoint = (TableRow) TableLayoutPoints.getChildAt(0);
+                    EditText textPoint = (EditText) tableRowPoint.getChildAt(1);
+                    EditText textVictoire = (EditText) tableRowPoint.getChildAt(0);
+                    points += Integer.parseInt(String.valueOf(textPoint.getText()));
+                    String victoiresS = String.valueOf(textVictoire.getText());
+                    if (victoiresS.equals("V")) {
+                        victoires++;
+                    }
+                }
+
+            }
+            TextView pointTot = (TextView) tableRow.getChildAt(3 + len);
+            String spoint = String.valueOf(points);
+            pointTot.setText(spoint);
+
+            TextView VictTot = (TextView) tableRow.getChildAt(2 + len);
+            String svict = String.valueOf(victoires);
+            VictTot.setText(svict);
+        }
 
     }
 }

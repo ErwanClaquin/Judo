@@ -3,6 +3,7 @@ package com.example.judofeuilledecombats;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -11,6 +12,7 @@ import android.util.Log;
 import android.os.Vibrator;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class CombatActivity extends AppCompatActivity {
 
@@ -27,6 +29,7 @@ public class CombatActivity extends AppCompatActivity {
     private CountDownTimer countDownTimer;
     private Button buttonPauseTimer;
     private Button buttonStartTimer;
+    private String vainqueur;
     private TextView IpponB;
     private TextView WazaB;
     private TextView ShidoB;
@@ -62,7 +65,7 @@ public class CombatActivity extends AppCompatActivity {
 
         Button buttonBIpponMinus = findViewById(R.id.B_ippon_minus);
         buttonBIpponMinus.setOnClickListener(v -> {
-            numberBIppon = numberBIppon > 0 ? numberBIppon - 1 : 0;
+            numberBIppon = 0;
             IpponB.setText(String.valueOf(numberBIppon));
         });
 
@@ -80,7 +83,7 @@ public class CombatActivity extends AppCompatActivity {
 
         Button buttonBIpponPlus = findViewById(R.id.B_ippon_plus);
         buttonBIpponPlus.setOnClickListener(v -> {
-            numberBIppon++;
+            numberBIppon = 1;
             IpponB.setText(String.valueOf(numberBIppon));
         });
 
@@ -98,7 +101,7 @@ public class CombatActivity extends AppCompatActivity {
 
         Button buttonRIpponMinus = findViewById(R.id.R_ippon_minus);
         buttonRIpponMinus.setOnClickListener(v -> {
-            numberRIppon = numberRIppon > 0 ? numberRIppon - 1 : 0;
+            numberRIppon = 0;
             IpponR.setText(String.valueOf(numberRIppon));
         });
 
@@ -116,7 +119,7 @@ public class CombatActivity extends AppCompatActivity {
 
         Button buttonRIpponPlus = findViewById(R.id.R_ippon_plus);
         buttonRIpponPlus.setOnClickListener(v -> {
-            numberRIppon++;
+            numberRIppon = 1;
             IpponR.setText(String.valueOf(numberRIppon));
         });
         Button buttonRWazaPlus = findViewById(R.id.R_waza_plus);
@@ -132,13 +135,7 @@ public class CombatActivity extends AppCompatActivity {
         });
 
         Button buttonEndCombat = findViewById(R.id.EndCombat);
-        buttonEndCombat.setOnClickListener(v ->
-        {
-            if (vib != null) {
-                vib.cancel();
-            }
-            this.finish();
-        });
+        buttonEndCombat.setOnClickListener(v -> checkEndCombat());
     }
 
     private void startTimer() {
@@ -195,6 +192,52 @@ public class CombatActivity extends AppCompatActivity {
         timeLeft += seconds;
         timer.setText(timeLeft);
     }
+
+    private void checkEndCombat() {
+        if (numberBIppon == 1 && numberRIppon == 1) {
+            Toast.makeText(getApplicationContext(), "Ippon Blanc et Rouge, attention", Toast.LENGTH_LONG).show();
+        } else if (numberBIppon == 1) {
+            vainqueur = "B";
+            endCombat();
+        } else if (numberRIppon == 1) {
+            vainqueur = "R";
+            endCombat();
+        } else if (numberBWaza == numberRWaza) {
+            vainqueur = askWinner();
+            if (vainqueur.equals("B") || vainqueur.equals("R")) {
+                endCombat();
+            }
+        } else if (numberBWaza > numberBIppon) {
+            vainqueur = "B";
+            endCombat();
+        } else if (numberRWaza > numberBWaza) {
+            vainqueur = "R";
+            endCombat();
+        }
+    }
+
+    private String askWinner() {
+        return "o";
+    }
+
+    private void endCombat() {
+
+        if (vib != null) {
+            vib.cancel();
+        }
+        Intent intent = new Intent();
+        intent.putExtra("numberBIppon", String.valueOf(numberBIppon));
+        intent.putExtra("numberBWaza", String.valueOf(numberBWaza));
+        intent.putExtra("numberBShido", String.valueOf(numberBShido));
+        intent.putExtra("numberRIppon", String.valueOf(numberRIppon));
+        intent.putExtra("numberRWaza", String.valueOf(numberRWaza));
+        intent.putExtra("numberRShido", String.valueOf(numberRShido));
+        intent.putExtra("vainqueur", vainqueur);
+        setResult(RESULT_OK, intent);
+        finish();
+    }
+
+
     @Override
     public void onBackPressed() {
 

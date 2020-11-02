@@ -4,13 +4,12 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
@@ -34,6 +33,7 @@ public class FileActivity extends AppCompatActivity {
         setContentView(R.layout.activity_file);
         buttonStart = findViewById(R.id.buttonStartCombat);
         buttonStart.setOnClickListener(v -> verifStart());
+
     }
 
     private void verifStart() {
@@ -52,9 +52,30 @@ public class FileActivity extends AppCompatActivity {
             if (firstLauch) {
                 resizeTable(tableLayout, tableRowList);
                 attributeListCombat(tableLayout);
+                LinearLayout l = findViewById(R.id.prepareCombattants);
+                l.setVisibility(View.VISIBLE);
                 firstLauch = false;
             }
-            startActivityForResult(new Intent(FileActivity.this, CombatActivity.class), requestCodeCombat);
+            String s = listeCombat.get(0);
+            int rowCombattantRed = Character.getNumericValue(s.charAt(0));
+            int rowCombattantBlanc = Character.getNumericValue(s.charAt(1));
+            String e1 = getCombattants(rowCombattantRed);
+            String e2 = getCombattants(rowCombattantBlanc);
+            Intent i = new Intent(FileActivity.this, CombatActivity.class);
+            i.putExtra("CombattantR", e1);
+            i.putExtra("CombattantB", e2);
+
+            if (listeCombat.size() > 1) {
+                String snext = listeCombat.get(1);
+                int rowCombattantRedNext = Character.getNumericValue(snext.charAt(0));
+                int rowCombattantBlancNext = Character.getNumericValue(snext.charAt(1));
+                String e1next = getCombattants(rowCombattantRedNext);
+                String e2next = getCombattants(rowCombattantBlancNext);
+                i.putExtra("CombattantRNext", e1next);
+                i.putExtra("CombattantBNext", e2next);
+            }
+            startActivityForResult(i, requestCodeCombat);
+
         }
     }
 
@@ -96,7 +117,7 @@ public class FileActivity extends AppCompatActivity {
                 listeCombat = new ArrayList<>(Arrays.asList("12", "34", "13", "24", "14", "23"));
                 break;
             case 5:
-                listeCombat = new ArrayList<>(Arrays.asList("12", "43", "15", "23", "45", "13", "25", "14", "35", "24"));
+                listeCombat = new ArrayList<>(Arrays.asList("12", "34", "15", "23", "45", "13", "25", "14", "35", "24"));
                 break;
             case 6:
                 listeCombat = new ArrayList<>(Arrays.asList("12", "34", "26", "15", "46", "23", "16", "45", "13", "25", "36", "14", "35", "24", "56"));
@@ -203,7 +224,6 @@ public class FileActivity extends AppCompatActivity {
                     rowPointopp.setText(new String(srowopp));
 
                     listeCombat.remove(0);
-
                     if (listeCombat.size() == 0) {
                         buttonStart.setVisibility(View.INVISIBLE);
                         ConstraintLayout constraintLayout = findViewById(R.id.constraintLayout);
@@ -221,18 +241,23 @@ public class FileActivity extends AppCompatActivity {
     }
 
     private void displayCombattant() {
+
         String s = listeCombat.get(0);
-        int rowCombattantRed = s.charAt(0);
-        int rowCombattantBlanc = s.charAt(1);
+        int rowCombattantRed = Character.getNumericValue(s.charAt(0));
+        int rowCombattantBlanc = Character.getNumericValue(s.charAt(1));
+        String e1 = getCombattants(rowCombattantRed);
+        String e2 = getCombattants(rowCombattantBlanc);
+        TextView T_B = findViewById(R.id.FuturcombattantBlanc);
+        TextView T_R = findViewById(R.id.FuturcombattantRed);
+        T_R.setText(e1);
+        T_B.setText(e2);
+    }
+
+    private String getCombattants(int rowCombattant) {
         TableLayout tableLayout = findViewById(R.id.maintable);
-        TableRow r1 = (TableRow) tableLayout.getChildAt(rowCombattantRed + 1);
-        EditText e1 = (EditText) r1.getChildAt(0);
-        TableRow r2 = (TableRow) tableLayout.getChildAt(rowCombattantBlanc + 1);
-        EditText e2 = (EditText) r2.getChildAt(0);
-        TextView T_B = findViewById(R.id.combattantBlanc);
-        TextView T_R = findViewById(R.id.combattantRed);
-        T_R.setText(e1.getText());
-        T_B.setText(e2.getText());
+        TableRow r1 = (TableRow) tableLayout.getChildAt(rowCombattant);
+        TextView e1 = (TextView) r1.getChildAt(0);
+        return "" + e1.getText();
     }
 
     private void fillResult() {

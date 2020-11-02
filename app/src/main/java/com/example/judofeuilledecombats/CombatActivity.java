@@ -10,7 +10,9 @@ import android.os.CountDownTimer;
 import android.os.VibrationEffect;
 import android.util.Log;
 import android.os.Vibrator;
+import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -42,12 +44,12 @@ public class CombatActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_combat);
-        IpponB = (TextView) findViewById(R.id.B_ippon);
-        WazaB = (TextView) findViewById(R.id.B_waza);
-        ShidoB = (TextView) findViewById(R.id.B_shido);
-        IpponR = (TextView) findViewById(R.id.R_ippon);
-        WazaR = (TextView) findViewById(R.id.R_waza);
-        ShidoR = (TextView) findViewById(R.id.R_shido);
+        IpponB = findViewById(R.id.B_ippon);
+        WazaB = findViewById(R.id.B_waza);
+        ShidoB = findViewById(R.id.B_shido);
+        IpponR = findViewById(R.id.R_ippon);
+        WazaR = findViewById(R.id.R_waza);
+        ShidoR = findViewById(R.id.R_shido);
         IpponB.setText(String.valueOf(numberBIppon));
         WazaB.setText(String.valueOf(numberBWaza));
         ShidoB.setText(String.valueOf(numberBShido));
@@ -136,6 +138,28 @@ public class CombatActivity extends AppCompatActivity {
 
         Button buttonEndCombat = findViewById(R.id.EndCombat);
         buttonEndCombat.setOnClickListener(v -> checkEndCombat());
+
+        Intent intent = getIntent();
+        String CombattantR = intent.getStringExtra("CombattantR");
+        String CombattantB = intent.getStringExtra("CombattantB");
+        String CombattantRNext = intent.getStringExtra("CombattantRNext");
+        String CombattantBNext = intent.getStringExtra("CombattantBNext");
+
+        TextView combR = findViewById(R.id.CombattantR);
+        TextView combB = findViewById(R.id.CombattantB);
+        combB.setText(CombattantB);
+        combR.setText(CombattantR);
+
+        if (CombattantBNext == null) {
+            LinearLayout prepare = findViewById(R.id.prepare);
+            prepare.setVisibility(View.INVISIBLE);
+        } else {
+            TextView futcombR = findViewById(R.id.FuturcombattantRed);
+            TextView futcombB = findViewById(R.id.FuturcombattantBlanc);
+            futcombB.setText(CombattantBNext);
+            futcombR.setText(CombattantRNext);
+        }
+
     }
 
     private void startTimer() {

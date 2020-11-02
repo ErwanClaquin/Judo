@@ -21,6 +21,7 @@
             android:gravity="center"
             android:orientation="vertical">
 
+
             <HorizontalScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -32,132 +33,10 @@
                     android:orientation="horizontal">
 
                     <TableLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:padding="20dp">
-
-                        <TableRow
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent">
-
-                            <Button
-                                android:id="@+id/B_ippon_plus"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/plus"
-                                android:textColor="#000000"
-                                app:backgroundTint="#FFFFFF"
-                                tools:ignore="ButtonStyle" />
-
-                            <Button
-                                android:id="@+id/B_waza_plus"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/plus"
-                                android:textColor="#000000"
-                                app:backgroundTint="#FFFFFF"
-                                tools:ignore="ButtonStyle" />
-
-                            <Button
-                                android:id="@+id/B_shido_plus"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/plus"
-                                android:textColor="#000000"
-                                app:backgroundTint="#FFFFFF"
-                                tools:ignore="ButtonStyle" />
-
-                        </TableRow>
-
-                        <TableRow
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:text="@string/ippon" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:text="@string/waza" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:text="@string/shido" />
-                        </TableRow>
-
-                        <TableRow
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent">
-
-                            <TextView
-                                android:id="@+id/B_ippon"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:text="0"
-                                tools:ignore="HardcodedText" />
-
-                            <TextView
-                                android:id="@+id/B_waza"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:text="0"
-                                tools:ignore="HardcodedText" />
-
-                            <TextView
-                                android:id="@+id/B_shido"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:text="0"
-                                tools:ignore="HardcodedText" />
-                        </TableRow>
-
-                        <TableRow
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent">
-
-                            <Button
-                                android:id="@+id/B_ippon_minus"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/minus"
-                                android:textColor="#000000"
-                                app:backgroundTint="#FFFFFF"
-                                tools:ignore="ButtonStyle" />
-
-                            <Button
-                                android:id="@+id/B_waza_minus"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/minus"
-                                android:textColor="#000000"
-                                app:backgroundTint="#FFFFFF"
-                                tools:ignore="ButtonStyle" />
-
-                            <Button
-                                android:id="@+id/B_shido_minus"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/minus"
-                                android:textColor="#000000"
-                                app:backgroundTint="#FFFFFF"
-                                tools:ignore="ButtonStyle" />
-                        </TableRow>
-                    </TableLayout>
-
-                    <TableLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:padding="20dp">
+
 
                         <TableRow
                             android:layout_width="match_parent"
@@ -275,6 +154,158 @@
                                 app:backgroundTint="#FF0000"
                                 tools:ignore="ButtonStyle" />
                         </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+
+                            <TextView
+                                android:id="@+id/CombattantR"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:textColor="#D10A0A"
+                                android:textSize="24sp" />
+                        </TableRow>
+                    </TableLayout>
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="20dp">
+
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <Button
+                                android:id="@+id/B_ippon_plus"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/plus"
+                                android:textColor="#000000"
+                                app:backgroundTint="#FFFFFF"
+                                tools:ignore="ButtonStyle" />
+
+                            <Button
+                                android:id="@+id/B_waza_plus"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/plus"
+                                android:textColor="#000000"
+                                app:backgroundTint="#FFFFFF"
+                                tools:ignore="ButtonStyle" />
+
+                            <Button
+                                android:id="@+id/B_shido_plus"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/plus"
+                                android:textColor="#000000"
+                                app:backgroundTint="#FFFFFF"
+                                tools:ignore="ButtonStyle" />
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/ippon" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/waza" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/shido" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/B_ippon"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="0"
+                                tools:ignore="HardcodedText" />
+
+                            <TextView
+                                android:id="@+id/B_waza"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="0"
+                                tools:ignore="HardcodedText" />
+
+                            <TextView
+                                android:id="@+id/B_shido"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="0"
+                                tools:ignore="HardcodedText" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <Button
+                                android:id="@+id/B_ippon_minus"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/minus"
+                                android:textColor="#000000"
+                                app:backgroundTint="#FFFFFF"
+                                tools:ignore="ButtonStyle" />
+
+                            <Button
+                                android:id="@+id/B_waza_minus"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/minus"
+                                android:textColor="#000000"
+                                app:backgroundTint="#FFFFFF"
+                                tools:ignore="ButtonStyle" />
+
+                            <Button
+                                android:id="@+id/B_shido_minus"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/minus"
+                                android:textColor="#000000"
+                                app:backgroundTint="#FFFFFF"
+                                tools:ignore="ButtonStyle" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+
+                            <TextView
+                                android:id="@+id/CombattantB"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:textSize="24sp" />
+                        </TableRow>
+
                     </TableLayout>
 
                 </LinearLayout>
@@ -313,6 +344,62 @@
                     android:text="@string/pause" />
             </LinearLayout>
 
+
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/prepare"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:text="@string/se_pr_pare"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/FuturcombattantRed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:text=""
+                        android:textColor="#D10A0A"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:text="@string/contre"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/FuturcombattantBlanc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:text=""
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
         </LinearLayout>
     </ScrollView>
 

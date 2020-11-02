@@ -24,10 +24,14 @@
             app:layout_constraintStart_toStartOf="parent">
 
             <LinearLayout
+                android:id="@+id/prepareCombattants"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:paddingTop="5dp"
+                android:paddingBottom="15dp"
+                android:visibility="invisible">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -38,7 +42,7 @@
                     android:text="@string/se_pr_pare" />
 
                 <TextView
-                    android:id="@+id/combattantRed"
+                    android:id="@+id/FuturcombattantRed"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -56,7 +60,7 @@
                     android:text="@string/contre" />
 
                 <TextView
-                    android:id="@+id/combattantBlanc"
+                    android:id="@+id/FuturcombattantBlanc"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -1379,6 +1383,7 @@
                         android:text="@string/_4" />
 
                     <TableLayout
+                        android:id="@+id/_41"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="@drawable/border">
@@ -1439,6 +1444,7 @@
                     </TableLayout>
 
                     <TableLayout
+                        android:id="@+id/_42"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="@drawable/border">
@@ -1499,6 +1505,7 @@
                     </TableLayout>
 
                     <TableLayout
+                        android:id="@+id/_43"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="@drawable/border">
@@ -1566,6 +1573,7 @@
                         android:text="" />
 
                     <TableLayout
+                        android:id="@+id/_45"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="@drawable/border">
@@ -1626,6 +1634,7 @@
                     </TableLayout>
 
                     <TableLayout
+                        android:id="@+id/_46"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="@drawable/border">

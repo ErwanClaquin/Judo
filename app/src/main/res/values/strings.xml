@@ -22,6 +22,6 @@
     <string name="fin_du_combat">Fin du combat</string>
     <string name="start">Start</string>
     <string name="pause">Pause</string>
-    <string name="se_pr_pare">Se prépare :</string>
+    <string name="se_pr_pare">(Prochain combat) Se prépare :</string>
     <string name="contre">Contre</string>
 </resources>

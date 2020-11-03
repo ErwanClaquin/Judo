@@ -7,7 +7,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.text.Editable;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -18,6 +18,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import org.jetbrains.annotations.NotNull;
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -100,7 +101,6 @@ public class FileActivity extends AppCompatActivity {
         }
 
         //remove useless colomn
-        List<TableRow> tableRowColRemove = new ArrayList<>();
 
         for (int i = 0; i < tableLayout.getChildCount(); i++) {
             TableRow t = (TableRow) tableLayout.getChildAt(i);
@@ -173,34 +173,35 @@ public class FileActivity extends AppCompatActivity {
                         VorX.setTextColor(Color.parseColor("#00FF00"));
                         VorXopp.setText("X");
                         VorXopp.setTextColor(Color.parseColor("#FF0000"));
+                        if (numberRIppon == 1 || numberRWaza == 2) {
+                            final String sr = "10";
+                            points.setText(sr);
+                        } else if (numberRWaza == 1) {
+                            points.setText("7");
+                        } else {
+                            points.setText("0");
+                        }
 
                     } else {
                         VorX.setText("X");
                         VorX.setTextColor(Color.parseColor("#FF0000"));
                         VorXopp.setText("V");
                         VorXopp.setTextColor(Color.parseColor("#00FF00"));
-
+                        if (numberBIppon == 1 || numberBWaza == 2) {
+                            final String sr2 = "10";
+                            pointsopp.setText(sr2);
+                        } else if (numberBWaza == 1) {
+                            pointsopp.setText("7");
+                        } else {
+                            pointsopp.setText("0");
+                        }
 
                     }
 
 
                     //first row second col
-                    if (numberRIppon == 1 || numberRWaza == 2) {
-                        final String sr = "10";
-                        points.setText(sr);
-                    } else if (numberRWaza == 1) {
-                        points.setText("7");
-                    } else {
-                        points.setText("0");
-                    }
-                    if (numberBIppon == 1 || numberBWaza == 2) {
-                        final String sr2 = "10";
-                        pointsopp.setText(sr2);
-                    } else if (numberBWaza == 1) {
-                        pointsopp.setText("7");
-                    } else {
-                        pointsopp.setText("0");
-                    }
+
+
                     //second row
                     char[] srow = "xx(x)".toCharArray();
                     if (numberRIppon == 1 || numberRWaza == 2) {
@@ -272,6 +273,7 @@ public class FileActivity extends AppCompatActivity {
     private void fillResult() {
         TableLayout tableLayout = findViewById(R.id.maintable);
         int len = tableLayout.getChildCount();
+        int[][] places = new int[len - 1][4]; //[[index, victoires, points, place], ...]
         for (int j = 1; j < len; j++) {
             int points = 0;
             int victoires = 0;
@@ -290,13 +292,61 @@ public class FileActivity extends AppCompatActivity {
                 }
 
             }
+            TextView VictTot = (TextView) tableRow.getChildAt(2 + len);
+            String svict = String.valueOf(victoires);
+            VictTot.setText(svict);
+
             TextView pointTot = (TextView) tableRow.getChildAt(3 + len);
             String spoint = String.valueOf(points);
             pointTot.setText(spoint);
 
-            TextView VictTot = (TextView) tableRow.getChildAt(2 + len);
-            String svict = String.valueOf(victoires);
-            VictTot.setText(svict);
+            places[j - 1] = new int[]{j, victoires, points, 0};
+        }
+        Log.v("PLACE", Arrays.deepToString(places));
+        sortPlace(places);
+        Log.v("PLACE", Arrays.deepToString(places));
+        for (int k = 0; k < len - 1; k++) {
+            TableRow tableRow = (TableRow) tableLayout.getChildAt(places[k][0]);
+            TextView textPlace = (TextView) tableRow.getChildAt(4 + len);
+            Log.v("WESH??", k + "; " + places[k][3]);
+            textPlace.setText(String.valueOf(places[k][3]));
+        }
+    }
+
+    private void sortPlace(int[][] places) {
+        int[] temp;
+        for (int i = 0; i < places.length - 1; i++) {
+            for (int j = i + 1; j < places.length; j++) {
+                if (places[i][1] < places[j][1]) {
+                    temp = places[j];
+                    places[j] = places[i];
+                    places[i] = temp;
+                } else if (places[i][1] == places[j][1]) {
+                    if (places[i][2] < places[j][2]) {
+                        temp = places[j];
+                        places[j] = places[i];
+                        places[i] = temp;
+                    }
+
+                }
+            }
+        }
+        attributeRank(places);
+    }
+
+    private void attributeRank(int[][] places) {
+        // MUST BE SORTED !
+        int place = 1;
+        places[0][3] = place;
+        for (int i = 1; i < places.length; i++) {
+            if (places[i][1] < places[i - 1][1]) {
+                place = i + 1;
+            } else {
+                if (places[i][2] < places[i - 1][2]) {
+                    place = i + 1;
+                }
+            }
+            places[i][3] = place;
         }
 
     }

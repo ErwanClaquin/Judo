@@ -7,7 +7,6 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -18,11 +17,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import org.jetbrains.annotations.NotNull;
-import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 
 public class FileActivity extends AppCompatActivity {
     private boolean firstLauch = true;
@@ -124,6 +123,8 @@ public class FileActivity extends AppCompatActivity {
             case 6:
                 listeCombat = new ArrayList<>(Arrays.asList("12", "34", "26", "15", "46", "23", "16", "45", "13", "25", "36", "14", "35", "24", "56"));
                 break;
+            default:
+                break;
         }
     }
 
@@ -168,11 +169,13 @@ public class FileActivity extends AppCompatActivity {
                     TableRow Row2opp = (TableRow) tResultopp.getChildAt(1);
                     EditText rowPointopp = (EditText) Row2opp.getChildAt(0);
                     //first row first col
-                    if (vainqueur.equals("R")) {
+                    if (Objects.requireNonNull(vainqueur).equals("R")) {
                         VorX.setText("V");
                         VorX.setTextColor(Color.parseColor("#00FF00"));
                         VorXopp.setText("X");
                         VorXopp.setTextColor(Color.parseColor("#FF0000"));
+
+                        //first row second col
                         if (numberRIppon == 1 || numberRWaza == 2) {
                             final String sr = "10";
                             points.setText(sr);
@@ -187,6 +190,8 @@ public class FileActivity extends AppCompatActivity {
                         VorX.setTextColor(Color.parseColor("#FF0000"));
                         VorXopp.setText("V");
                         VorXopp.setTextColor(Color.parseColor("#00FF00"));
+
+                        //first row second col
                         if (numberBIppon == 1 || numberBWaza == 2) {
                             final String sr2 = "10";
                             pointsopp.setText(sr2);
@@ -195,41 +200,18 @@ public class FileActivity extends AppCompatActivity {
                         } else {
                             pointsopp.setText("0");
                         }
-
                     }
-
-
-                    //first row second col
-
 
                     //second row
                     char[] srow = "xx(x)".toCharArray();
-                    if (numberRIppon == 1 || numberRWaza == 2) {
-                        srow[0] = '1';
-                    } else {
-                        srow[0] = '0';
-
-                    }
-                    if (numberRWaza == 1) {
-                        srow[1] = '1';
-                    } else {
-                        srow[1] = '0';
-
-                    }
+                    srow[0] = numberRIppon == 1 || numberRWaza == 2 ? '1' : '0';
+                    srow[1] = numberRWaza == 1 ? '1' : '0';
                     srow[3] = ("" + numberRShido).charAt(0);
                     rowPoint.setText(new String(srow));
 
                     char[] srowopp = "xx(x)".toCharArray();
-                    if (numberBIppon == 1 || numberBWaza == 2) {
-                        srowopp[0] = '1';
-                    } else {
-                        srowopp[0] = '0';
-                    }
-                    if (numberBWaza == 1) {
-                        srowopp[1] = '1';
-                    } else {
-                        srowopp[1] = '0';
-                    }
+                    srowopp[0] = numberBIppon == 1 || numberBWaza == 2 ? '1' : '0';
+                    srowopp[1] = numberBWaza == 1 ? '1' : '0';
                     srowopp[3] = ("" + numberBShido).charAt(0);
                     rowPointopp.setText(new String(srowopp));
 
@@ -302,13 +284,10 @@ public class FileActivity extends AppCompatActivity {
 
             places[j - 1] = new int[]{j, victoires, points, 0};
         }
-        Log.v("PLACE", Arrays.deepToString(places));
         sortPlace(places);
-        Log.v("PLACE", Arrays.deepToString(places));
         for (int k = 0; k < len - 1; k++) {
             TableRow tableRow = (TableRow) tableLayout.getChildAt(places[k][0]);
             TextView textPlace = (TextView) tableRow.getChildAt(4 + len);
-            Log.v("WESH??", k + "; " + places[k][3]);
             textPlace.setText(String.valueOf(places[k][3]));
         }
     }

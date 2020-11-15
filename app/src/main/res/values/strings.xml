@@ -24,4 +24,9 @@
     <string name="pause">Pause</string>
     <string name="se_pr_pare">(Prochain combat) Se prépare :</string>
     <string name="contre">Contre</string>
+    <string name="refresh">Refresh</string>
+    <string name="impossible_de_d_partager_les_deux_combattants">Impossible de départager les deux combattants.</string>
+    <string name="combattant_blanc_gagne">Combattant Blanc gagne</string>
+    <string name="rajouter_du_temps">Rajouter du temps</string>
+    <string name="combattant_rouge_gagne">Combattant Rouge gagne</string>
 </resources>

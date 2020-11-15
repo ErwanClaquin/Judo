@@ -1,8 +1,12 @@
 package com.example.judofeuilledecombats;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
@@ -10,11 +14,17 @@ import android.os.CountDownTimer;
 import android.os.VibrationEffect;
 import android.util.Log;
 import android.os.Vibrator;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.PopupWindow;
+import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.Arrays;
 
 public class CombatActivity extends AppCompatActivity {
 
@@ -57,7 +67,7 @@ public class CombatActivity extends AppCompatActivity {
         WazaR.setText(String.valueOf(numberRWaza));
         ShidoR.setText(String.valueOf(numberRShido));
 
-        timer = (TextView) findViewById(R.id.Timer);
+        timer = findViewById(R.id.Timer);
         updateTimer();
         buttonStartTimer = findViewById(R.id.startTimer);
         buttonStartTimer.setOnClickListener(v -> startTimer());
@@ -163,7 +173,6 @@ public class CombatActivity extends AppCompatActivity {
     }
 
     private void startTimer() {
-        Log.v("Start", String.valueOf(timeLeftMillis));
         if (!finishTimer) {
             countDownTimer = new CountDownTimer(timeLeftMillis, 1) {
                 @Override
@@ -184,7 +193,10 @@ public class CombatActivity extends AppCompatActivity {
                             vib.vibrate(pattern, -1);
                         }
                     }
-
+                    buttonStartTimer.setAlpha(1f);
+                    buttonPauseTimer.setAlpha(0.25f);
+                    buttonStartTimer.setClickable(true);
+                    buttonPauseTimer.setClickable(false);
                 }
             }.start();
             buttonStartTimer.setAlpha(0.25f);
@@ -219,7 +231,7 @@ public class CombatActivity extends AppCompatActivity {
 
     private void checkEndCombat() {
         if (numberBIppon == 1 && numberRIppon == 1) {
-            Toast.makeText(getApplicationContext(), "Ippon Blanc et Rouge, attention", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "Ippon Blanc ET Rouge, attention", Toast.LENGTH_LONG).show();
         } else if (numberBIppon == 1) {
             vainqueur = "B";
             endCombat();
@@ -240,8 +252,83 @@ public class CombatActivity extends AppCompatActivity {
         }
     }
 
+    @SuppressLint("SetTextI18n")
     private String askWinner() {
-        return "o";
+        final AlertDialog.Builder alert = new AlertDialog.Builder(this);
+        alert.setTitle("Attention");
+        alert.setMessage("Impossible de désigner un vainqueur");
+
+        LinearLayout linear = new LinearLayout(this);
+
+        linear.setOrientation(LinearLayout.VERTICAL);
+        TextView text = new TextView(this);
+        text.setText("0:00");
+        text.setPadding(10, 10, 10, 10);
+
+        SeekBar seek = new SeekBar(this);
+        seek.setMax(60);
+        seek.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                int minutes = (int) (progress * 5) / 60;
+                int seconds = (int) (progress * 5) % 60;
+                String timeLeft = minutes + ":";
+                if (seconds < 10) {
+                    timeLeft += "0";
+                }
+                timeLeft += seconds;
+                text.setText(timeLeft);
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+            }
+        });
+
+        linear.addView(seek);
+        linear.addView(text);
+
+        alert.setView(linear);
+
+        alert.setPositiveButton("Rajouter du temps", (dialog, which) -> {
+            String time = (String) text.getText();
+            Log.v("Help", time);
+            String[] timeSplit = time.split(":");
+            Log.v("Help", Arrays.toString(timeSplit));
+            int minutes = Integer.parseInt(timeSplit[0]);
+            int seconds = Integer.parseInt(timeSplit[1]);
+            if (minutes == 0 && seconds == 0) {
+                Toast.makeText(getApplicationContext(), "Aucun temps", Toast.LENGTH_SHORT).show();
+            } else {
+                timeLeftMillis = (minutes * 60 + seconds) * 1000;
+                String timeLeft = minutes + ":";
+                if (seconds < 10) {
+                    timeLeft += "0";
+                }
+                timeLeft += seconds;
+                timer.setText(timeLeft);
+            }
+            finishTimer = false;
+            dialog.cancel();
+        });
+
+        alert.setNegativeButton("Combattant Rouge gagne", (dialog, which) -> {
+            vainqueur = "R";
+            endCombat();
+            dialog.cancel();
+        });
+
+        alert.setNeutralButton("Combattant Blanc gagne", (dialog, which) -> {
+            vainqueur = "B";
+            endCombat();
+            dialog.cancel();
+        });
+        alert.show();
+        return "";
     }
 
     private void endCombat() {

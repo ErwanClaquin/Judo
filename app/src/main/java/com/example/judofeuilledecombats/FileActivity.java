@@ -28,6 +28,7 @@ public class FileActivity extends AppCompatActivity {
     private final int requestCodeCombat = 1;
     private List<String> listeCombat;
     private Button buttonStart;
+    private Button buttonRefresh;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +36,8 @@ public class FileActivity extends AppCompatActivity {
         setContentView(R.layout.activity_file);
         buttonStart = findViewById(R.id.buttonStartCombat);
         buttonStart.setOnClickListener(v -> verifStart());
+        buttonRefresh = findViewById(R.id.buttonRefresh);
+        buttonRefresh.setOnClickListener(v -> fillResult());
 
     }
 
@@ -218,6 +221,7 @@ public class FileActivity extends AppCompatActivity {
                     listeCombat.remove(0);
                     if (listeCombat.size() == 0) {
                         buttonStart.setVisibility(View.INVISIBLE);
+                        buttonRefresh.setVisibility(View.VISIBLE);
                         ConstraintLayout constraintLayout = findViewById(R.id.constraintLayout);
                         constraintLayout.setVisibility(View.INVISIBLE);
                         fillResult();
@@ -233,7 +237,6 @@ public class FileActivity extends AppCompatActivity {
     }
 
     private void displayCombattant() {
-
         String s = listeCombat.get(0);
         int rowCombattantRed = Character.getNumericValue(s.charAt(0));
         int rowCombattantBlanc = Character.getNumericValue(s.charAt(1));
@@ -266,10 +269,16 @@ public class FileActivity extends AppCompatActivity {
                     TableRow tableRowPoint = (TableRow) TableLayoutPoints.getChildAt(0);
                     EditText textPoint = (EditText) tableRowPoint.getChildAt(1);
                     EditText textVictoire = (EditText) tableRowPoint.getChildAt(0);
-                    points += Integer.parseInt(String.valueOf(textPoint.getText()));
-                    String victoiresS = String.valueOf(textVictoire.getText());
-                    if (victoiresS.equals("V")) {
+                    String pointString = String.valueOf(textPoint.getText());
+                    if (!pointString.equals("")) {
+                        points += Integer.parseInt(pointString);
+                    }
+                    String victoiresString = String.valueOf(textVictoire.getText());
+                    if (victoiresString.equals("V")) {
+                        textVictoire.setTextColor(Color.parseColor("#00FF00"));
                         victoires++;
+                    } else {
+                        textVictoire.setTextColor(Color.parseColor("#FF0000"));
                     }
                 }
 

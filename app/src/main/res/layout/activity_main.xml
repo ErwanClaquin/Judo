@@ -20,14 +20,17 @@
             android:id="@+id/buttonNew"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/nouvelle_feuille" />
+            android:background="@color/buttonTextBright"
+            android:text="@string/nouvelle_feuille"
+            app:backgroundTint="@color/buttonClassique" />
 
         <Button
             android:id="@+id/buttonLoad"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@color/buttonTextBright"
             android:text="@string/charger_une_feuille"
-            app:backgroundTint="#B11616" />
+            app:backgroundTint="@color/redButton" />
 
     </LinearLayout>
 

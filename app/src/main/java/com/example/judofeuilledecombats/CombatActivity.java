@@ -1,33 +1,30 @@
 package com.example.judofeuilledecombats;
 
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
-
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.VibrationEffect;
-import android.util.Log;
 import android.os.Vibrator;
-import android.view.Gravity;
-import android.view.LayoutInflater;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
-import android.widget.PopupWindow;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Arrays;
 
 public class CombatActivity extends AppCompatActivity {
 
+    private final long[] pattern = {0, 500, 500, 500, 500, 500, 500};
+    public boolean finishTimer = false;
     private int numberBIppon = 0;
     private int numberBWaza = 0;
     private int numberBShido = 0;
@@ -35,8 +32,6 @@ public class CombatActivity extends AppCompatActivity {
     private int numberRWaza = 0;
     private int numberRShido = 0;
     private long timeLeftMillis = 3000;
-    private final long[] pattern = {0, 500, 500, 500, 500, 500, 500};
-    public boolean finishTimer = false;
     private Vibrator vib;
     private CountDownTimer countDownTimer;
     private Button buttonPauseTimer;
@@ -270,8 +265,8 @@ public class CombatActivity extends AppCompatActivity {
         seek.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                int minutes = (int) (progress * 5) / 60;
-                int seconds = (int) (progress * 5) % 60;
+                int minutes = (progress * 5) / 60;
+                int seconds = (progress * 5) % 60;
                 String timeLeft = minutes + ":";
                 if (seconds < 10) {
                     timeLeft += "0";
@@ -296,9 +291,7 @@ public class CombatActivity extends AppCompatActivity {
 
         alert.setPositiveButton("Rajouter du temps", (dialog, which) -> {
             String time = (String) text.getText();
-            Log.v("Help", time);
             String[] timeSplit = time.split(":");
-            Log.v("Help", Arrays.toString(timeSplit));
             int minutes = Integer.parseInt(timeSplit[0]);
             int seconds = Integer.parseInt(timeSplit[1]);
             if (minutes == 0 && seconds == 0) {

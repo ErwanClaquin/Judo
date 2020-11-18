@@ -1,9 +1,5 @@
 package com.example.judofeuilledecombats;
 
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
-
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -16,6 +12,11 @@ import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
+import androidx.constraintlayout.widget.ConstraintLayout;
+
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
@@ -24,8 +25,8 @@ import java.util.List;
 import java.util.Objects;
 
 public class FileActivity extends AppCompatActivity {
-    private boolean firstLauch = true;
     private final int requestCodeCombat = 1;
+    private boolean firstLauch = true;
     private List<String> listeCombat;
     private Button buttonStart;
     private Button buttonRefresh;

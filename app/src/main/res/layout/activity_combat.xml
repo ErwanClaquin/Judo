@@ -47,8 +47,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="@string/plus"
-                                android:textColor="#000000"
-                                app:backgroundTint="#FF0000"
+                                android:textColor="@color/buttonTextDark"
+                                app:backgroundTint="@color/redButton"
                                 tools:ignore="ButtonStyle" />
 
                             <Button
@@ -56,8 +56,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="@string/plus"
-                                android:textColor="#000000"
-                                app:backgroundTint="#FF0000"
+                                android:textColor="@color/buttonTextDark"
+                                app:backgroundTint="@color/redButton"
                                 tools:ignore="ButtonStyle" />
 
                             <Button
@@ -65,8 +65,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="@string/plus"
-                                android:textColor="#000000"
-                                app:backgroundTint="#FF0000"
+                                android:textColor="@color/buttonTextDark"
+                                app:backgroundTint="@color/redButton"
                                 tools:ignore="ButtonStyle" />
 
                         </TableRow>
@@ -132,8 +132,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="@string/minus"
-                                android:textColor="#000000"
-                                app:backgroundTint="#FF0000"
+                                android:textColor="@color/buttonTextDark"
+                                app:backgroundTint="@color/redButton"
                                 tools:ignore="ButtonStyle" />
 
                             <Button
@@ -141,8 +141,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="@string/minus"
-                                android:textColor="#000000"
-                                app:backgroundTint="#FF0000"
+                                android:textColor="@color/buttonTextDark"
+                                app:backgroundTint="@color/redButton"
                                 tools:ignore="ButtonStyle" />
 
                             <Button
@@ -150,8 +150,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="@string/minus"
-                                android:textColor="#000000"
-                                app:backgroundTint="#FF0000"
+                                android:textColor="@color/buttonTextDark"
+                                app:backgroundTint="@color/redButton"
                                 tools:ignore="ButtonStyle" />
                         </TableRow>
 
@@ -185,8 +185,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="@string/plus"
-                                android:textColor="#000000"
-                                app:backgroundTint="#FFFFFF"
+                                android:textColor="@color/buttonTextDark"
+                                app:backgroundTint="@color/whiteButton"
                                 tools:ignore="ButtonStyle" />
 
                             <Button
@@ -194,8 +194,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="@string/plus"
-                                android:textColor="#000000"
-                                app:backgroundTint="#FFFFFF"
+                                android:textColor="@color/buttonTextDark"
+                                app:backgroundTint="@color/whiteButton"
                                 tools:ignore="ButtonStyle" />
 
                             <Button
@@ -203,8 +203,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="@string/plus"
-                                android:textColor="#000000"
-                                app:backgroundTint="#FFFFFF"
+                                android:textColor="@color/buttonTextDark"
+                                app:backgroundTint="@color/whiteButton"
                                 tools:ignore="ButtonStyle" />
 
                         </TableRow>
@@ -270,8 +270,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="@string/minus"
-                                android:textColor="#000000"
-                                app:backgroundTint="#FFFFFF"
+                                android:textColor="@color/buttonTextDark"
+                                app:backgroundTint="@color/whiteButton"
                                 tools:ignore="ButtonStyle" />
 
                             <Button
@@ -279,8 +279,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="@string/minus"
-                                android:textColor="#000000"
-                                app:backgroundTint="#FFFFFF"
+                                android:textColor="@color/buttonTextDark"
+                                app:backgroundTint="@color/whiteButton"
                                 tools:ignore="ButtonStyle" />
 
                             <Button
@@ -288,8 +288,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="@string/minus"
-                                android:textColor="#000000"
-                                app:backgroundTint="#FFFFFF"
+                                android:textColor="@color/buttonTextDark"
+                                app:backgroundTint="@color/whiteButton"
                                 tools:ignore="ButtonStyle" />
                         </TableRow>
 
@@ -322,7 +322,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/start" />
+                    android:text="@string/start"
+                    app:backgroundTint="@color/buttonClassique" />
 
                 <TextView
                     android:id="@+id/Timer"
@@ -341,7 +342,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:alpha="0.25"
-                    android:text="@string/pause" />
+                    android:text="@string/pause"
+                    app:backgroundTint="@color/buttonClassique" />
             </LinearLayout>
 
 
@@ -408,6 +410,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/fin_du_combat"
+        app:backgroundTint="@color/buttonClassique"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

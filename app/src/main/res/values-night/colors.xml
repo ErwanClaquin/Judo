@@ -8,22 +8,13 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <!--Custom color.
-    <color name="buttonTextBright">#FFFFFFFF</color>
-    <color name="buttonTextDark">#FF000000</color>
-    <color name="buttonClassique">#FF6200EE</color>
-    <color name="caseFile">#FF00FF00</color>
-    <color name="borderColor">#FF0000FF</color>
-    <color name="redButton">#FFFF0000</color>
-    <color name="whiteButton">#FFFFFFFF</color>-->
+    <!--Custom color.-->
     <color name="buttonTextBright">#FFAFAFAF</color>
     <color name="buttonTextDark">#FF000000</color>
     <color name="buttonClassique">#FFBB86FC</color>
-    <color name="caseFile">#FFAFAFAF</color>
-    <color name="borderColor">#FF000000</color>
+    <color name="caseFile">#FF0000FF</color>
+    <color name="borderColor">#FF00FF00</color>
     <color name="redButton">#FFCF0000</color>
     <color name="whiteButton">#FFCFCFCF</color>
-
-
 
 </resources>
